@@ -1,0 +1,124 @@
+\doxysection{Solver.\+cpp File Reference}
+\hypertarget{_solver_8cpp}{}\label{_solver_8cpp}\index{Solver.cpp@{Solver.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include \"{}solver.\+h\"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{_solver_8cpp_a44b066be3c3343442058810d0378257d}{Solve\+Square}} (float a, float b, float c, float \texorpdfstring{$\ast$}{*}x1, float \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em This function finds the roots of the square equation and returns them to the main function. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_solver_8cpp_a4117fa344ae503b6493248106e494946}{Solve\+Linear}} (float b, float c, float \texorpdfstring{$\ast$}{*}x1)
+\begin{DoxyCompactList}\small\item\em This function finds the roots of the square equation and returns the value to the other functions. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_solver_8cpp_ad29c9ee34368de62484dbed03ab6b4c7}{is\+Equal}} (float x1, float x2)
+\begin{DoxyCompactList}\small\item\em This function recognises whether two numbers are equal or not by current precision ( 1e-\/5 ). \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{_solver_8cpp_a6b9215ae18761319131a33737b3f3a33}{is\+Equal\+Zero}} (float a)
+\begin{DoxyCompactList}\small\item\em This function determines whether a number is zero or not. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_solver_8cpp_abbf4de096386f7495ac3c920f87d2d09}{swap}} (float \texorpdfstring{$\ast$}{*}x1, float \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em This function changes the value of two numbers between each other. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_solver_8cpp_ad29c9ee34368de62484dbed03ab6b4c7}\label{_solver_8cpp_ad29c9ee34368de62484dbed03ab6b4c7} 
+\index{Solver.cpp@{Solver.cpp}!isEqual@{isEqual}}
+\index{isEqual@{isEqual}!Solver.cpp@{Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{isEqual()}{isEqual()}}
+{\footnotesize\ttfamily is\+Equal (\begin{DoxyParamCaption}\item[{float}]{x1,  }\item[{float}]{x2 }\end{DoxyParamCaption})}
+
+
+
+This function recognises whether two numbers are equal or not by current precision ( 1e-\/5 ). 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x1} & -\/ the first number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & -\/ the second number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return True / False. 
+\end{DoxyReturn}
+\Hypertarget{_solver_8cpp_a6b9215ae18761319131a33737b3f3a33}\label{_solver_8cpp_a6b9215ae18761319131a33737b3f3a33} 
+\index{Solver.cpp@{Solver.cpp}!isEqualZero@{isEqualZero}}
+\index{isEqualZero@{isEqualZero}!Solver.cpp@{Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{isEqualZero()}{isEqualZero()}}
+{\footnotesize\ttfamily is\+Equal\+Zero (\begin{DoxyParamCaption}\item[{float}]{a }\end{DoxyParamCaption})}
+
+
+
+This function determines whether a number is zero or not. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ comparable number. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return True / False. 
+\end{DoxyReturn}
+\Hypertarget{_solver_8cpp_a4117fa344ae503b6493248106e494946}\label{_solver_8cpp_a4117fa344ae503b6493248106e494946} 
+\index{Solver.cpp@{Solver.cpp}!SolveLinear@{SolveLinear}}
+\index{SolveLinear@{SolveLinear}!Solver.cpp@{Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveLinear()}{SolveLinear()}}
+{\footnotesize\ttfamily Solve\+Linear (\begin{DoxyParamCaption}\item[{float}]{b,  }\item[{float}]{c,  }\item[{float \texorpdfstring{$\ast$}{*}}]{x1 }\end{DoxyParamCaption})}
+
+
+
+This function finds the roots of the square equation and returns the value to the other functions. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ the first argument of square equation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & -\/ the second argument of square equation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & -\/ the third argument of square equation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return number of roots. 
+\end{DoxyReturn}
+\Hypertarget{_solver_8cpp_a44b066be3c3343442058810d0378257d}\label{_solver_8cpp_a44b066be3c3343442058810d0378257d} 
+\index{Solver.cpp@{Solver.cpp}!SolveSquare@{SolveSquare}}
+\index{SolveSquare@{SolveSquare}!Solver.cpp@{Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{SolveSquare()}{SolveSquare()}}
+{\footnotesize\ttfamily Solve\+Square (\begin{DoxyParamCaption}\item[{float}]{a,  }\item[{float}]{b,  }\item[{float}]{c,  }\item[{float \texorpdfstring{$\ast$}{*}}]{x1,  }\item[{float \texorpdfstring{$\ast$}{*}}]{x2 }\end{DoxyParamCaption})}
+
+
+
+This function finds the roots of the square equation and returns them to the main function. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & -\/ the first argument of square equation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & -\/ the second argument of square equation. \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & -\/ the third argument of square equation. \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & -\/ pointer to the first root of square equation. \\
+\hline
+\mbox{\texttt{ out}}  & {\em x2} & -\/ pointer to the second root of square equation. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+return number of roots. 
+\end{DoxyReturn}
+\Hypertarget{_solver_8cpp_abbf4de096386f7495ac3c920f87d2d09}\label{_solver_8cpp_abbf4de096386f7495ac3c920f87d2d09} 
+\index{Solver.cpp@{Solver.cpp}!swap@{swap}}
+\index{swap@{swap}!Solver.cpp@{Solver.cpp}}
+\doxysubsubsection{\texorpdfstring{swap()}{swap()}}
+{\footnotesize\ttfamily swap (\begin{DoxyParamCaption}\item[{float \texorpdfstring{$\ast$}{*}}]{x1,  }\item[{float \texorpdfstring{$\ast$}{*}}]{x2 }\end{DoxyParamCaption})}
+
+
+
+This function changes the value of two numbers between each other. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em x1} & -\/ pointer to the first number. \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & -\/ pointer to the second number. \\
+\hline
+\end{DoxyParams}
