@@ -1,20 +1,20 @@
 #include <stdio.h>
+
 #include "io.h"
 #include "solver.h"
 
-void OutPutRoots (int nRoots, float x1, float x2)
+void OutPutRoots (int nRoots, Roots roots)
 {
-
     switch (nRoots)
     {
         case ANY_ROOTS:
             printf("any solutions\n");
             break;
         case ONE_ROOT:
-            printf("x = %f\n", x1);
+            printf("x = %f\n", roots.x1);
             break;
         case TWO_ROOTS:
-            printf("x1 = %f, x2 = %f\n", x1, x2);
+            printf("x1 = %f, x2 = %f\n", roots.x1, roots.x2);
             break;
         case NO_ROOTS:
             printf("no solutions\n");
@@ -28,9 +28,9 @@ void ClearBuffer ()
         ;
 }
 
-void InPutCoeffs (float* a, float* b, float* c)
+void InPutCoeffs (Coeffs *coeffs)
 {
-    while ( scanf("%f %f %f", a, b, c) != 3 )
+    while ( scanf("%f %f %f", &coeffs->a, &coeffs->b, &coeffs->c) != 3 )
     {
         printf("Incorect input!\n");
         ClearBuffer();

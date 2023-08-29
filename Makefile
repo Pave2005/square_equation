@@ -16,26 +16,26 @@ integer-divide-by-zero,nonnull-attribute,null,return,returns-nonnull-attribute,s
 signed-integer-overflow,undefined,unreachable,vla-bound
 
 APPLICATION = solver.out
-OBJ = main.o solver.o io.o solve_square_tester.o
-# BUILD_DIR = build
-# build/*.o
+OBJ = object_files/main.o object_files/solver.o object_files/io.o object_files/solve_square_tester.o
 
 all: $(APPLICATION)
 
 $(APPLICATION): $(OBJ)
 	$(CXX) $^ -o $@ $(CXXFLAGS)
 
-%.o: %.cpp
+object_files/%.o: %.cpp
 	$(CXX) $< -c -o $@ $(CXXFLAGS)
 
 # regular expressions
 # habr
 
-# doesn't create file with name clean (all)
-.PHONY: clean run all
+.PHONY: clean run test all
 
 clean:
 	rm *.o
 
-run:
+run: $(APPLICATION)
 	./$(APPLICATION)
+
+test: $(APPLICATION)
+	./$(APPLICATION) --test
